@@ -616,7 +616,7 @@ async getBonusBykeys(req: Request, res: Response, next: NextFunction)
     res.end();
 }
 
-export async function transferAccount(data: transferParams):Promise<object>
+async function transferAccount(data: transferParams):Promise<object>
 {
     let hex: string;
     let byteCount: number; 
