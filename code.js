@@ -769,7 +769,7 @@ async function transferAccount(data: transferParams):Promise<object>
 
     return { "hex": hex, "byteCount": byteCount, "txidStore": data.txidStore, "transfervalue": (data.payToValue - byteCount) / data.to.length };
 }
-export async function getBalance(addr: string): Promise<number>
+async function getBalance(addr: string): Promise<number>
 {
     let balance = await utils.httpRequest(`${fundgameService.apiprefix_addr}/${addr}/balance`);
     let unconfirmedBalance = await utils.httpRequest(`${fundgameService.apiprefix_addr}/${addr}/unconfirmedBalance`);
